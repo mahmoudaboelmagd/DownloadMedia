@@ -22,6 +22,7 @@ object Versions {
   val OKHTTP_LOGGING_INTERCEPTOR_VERSION = "3.12.1"
   val GSON_CONVERTER = "2.6.1"
   val ESPRESSO = "3.1.0"
+  val NAVIGATION = "2.3.5"
 }
 
 object Android {
@@ -51,6 +52,10 @@ object Libs {
   val loggingInterceptor =
     "com.squareup.okhttp3:logging-interceptor:${Versions.OKHTTP_LOGGING_INTERCEPTOR_VERSION}"
   val gsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.GSON_CONVERTER}"
+
+  val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.NAVIGATION}"
+  val navigationKtx = "androidx.navigation:navigation-ui-ktx:${Versions.NAVIGATION}"
+
 }
 
 object TestLibs {
