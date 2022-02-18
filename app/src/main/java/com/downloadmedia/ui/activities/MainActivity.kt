@@ -1,4 +1,4 @@
-package com.downloadmedia.ui
+package com.downloadmedia.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

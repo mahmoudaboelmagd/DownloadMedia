@@ -1,26 +1,40 @@
 package com.downloadmedia.ui.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.downloadmedia.R
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.downloadmedia.databinding.FragmentHomeBinding
+import com.downloadmedia.ui.adapters.MediaAdapter
 
 
 class HomeFragment : Fragment() {
 
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-
-  }
+  private lateinit var binding: FragmentHomeBinding
 
   override fun onCreateView(
-    inflater: LayoutInflater, container: ViewGroup?,
+    inflater: LayoutInflater,
+    container: ViewGroup?,
     savedInstanceState: Bundle?
-  ): View? {
-    // Inflate the layout for this fragment
-    return inflater.inflate(R.layout.fragment_home, container, false)
+  ): View {
+    if (this::binding.isInitialized) {
+      binding
+    } else {
+      binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+    }
+
+    initAdapter()
+
+    return binding.root
+  }
+
+  private fun initAdapter() {
+    val mediaAdapter = MediaAdapter(listOf("a", "b"))
+    binding.recyclerMedia.adapter = mediaAdapter
+    binding.recyclerMedia.layoutManager = LinearLayoutManager(activity)
   }
 
 }

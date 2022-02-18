@@ -15,6 +15,7 @@ object Versions {
   val JUNIT_EXT_VER = "1.1.0"
   val MATERIAL_VERSION = "1.2.1"
   val MOCKITO = "3.11.2"
+  val ROBOLECT = "4.2.1"
   val MULTIDEX = "2.0.1"
   val FRAGMENT_KTX = "1.2.5"
   val RX_RETROFIT_ADAPTER = "2.6.1"
@@ -64,4 +65,5 @@ object TestLibs {
   val junitExt = "androidx.test.ext:junit:${Versions.JUNIT_EXT_VER}"
   val mockito = "org.mockito:mockito-core:${Versions.MOCKITO}"
   val mockitoAndroid = "org.mockito:mockito-android:${Versions.MOCKITO}"
+  val robolect = "org.robolectric:robolectric:${Versions.ROBOLECT}"
 }
