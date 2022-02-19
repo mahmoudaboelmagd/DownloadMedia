@@ -1,6 +1,7 @@
 package com.downloadmedia
 
 import android.os.Build
+import com.downloadmedia.remoteDataModel.MediaDataModel
 import com.downloadmedia.ui.adapters.MediaAdapter
 import org.junit.Assert
 import org.junit.Test
@@ -20,7 +21,7 @@ class MediaAdapterTest {
 
   @Test
   fun validateThatListSizeIsOne() {
-    val adapter = MediaAdapter(listOf("item_one"))
+    val adapter = MediaAdapter(listOf(MediaDataModel(1,"","","", false)))
     Assert.assertEquals(1, adapter.itemCount)
   }
 

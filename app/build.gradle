@@ -1,6 +1,7 @@
 plugins {
   id 'com.android.application'
   id 'kotlin-android'
+  id 'kotlin-kapt'
 }
 
 android {
@@ -35,6 +36,7 @@ android {
   }
 }
 
+
 dependencies {
 
   implementation Libs.kotlinStdLib
@@ -42,10 +44,20 @@ dependencies {
   implementation Libs.appCompat
   implementation Libs.material
   implementation Libs.constraintLayout
+
   implementation Libs.navigationFragment
   implementation Libs.navigationKtx
-  implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-  implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+  implementation Libs.dagger
+  annotationProcessor Libs.daggerCompiler
+
+  implementation Libs.retrofit
+  implementation Libs.gsonConverter
+  implementation Libs.rxAdapter
+  implementation Libs.rxVersion
+  implementation Libs.rxAndroid
+
+  implementation Libs.pdfDownloader
 
   testImplementation TestLibs.junit
   testImplementation TestLibs.junitExt

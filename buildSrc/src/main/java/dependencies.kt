@@ -1,5 +1,6 @@
 object Versions {
-  val KOTLIN = "1.3.72"
+  val KOTLIN = "1.4.10"
+  val CORE_KTX = "1.3.2"
   val COMPILE_SDK = 32
   val MIN_SDK_VERSION = 21
   val TARGET_SDK_VERSION = 32
@@ -11,7 +12,6 @@ object Versions {
   val LIFE_CYCLE_VERSION = "2.2.0"
   val CONSTRAINT_LAYOUT = "2.0.4"
   val APP_COMPAT_VERSION = "1.3.0"
-  val CORE_KTX = "1.1.0"
   val JUNIT_EXT_VER = "1.1.0"
   val MATERIAL_VERSION = "1.2.1"
   val MOCKITO = "3.11.2"
@@ -24,6 +24,10 @@ object Versions {
   val GSON_CONVERTER = "2.6.1"
   val ESPRESSO = "3.1.0"
   val NAVIGATION = "2.3.5"
+  val DAGGER = "2.28.3"
+  val DAGGER_ANDROID = "2.15"
+  val DAGGER_COMPILER = "2.13"
+  val PDF_DOWNLOADER = "0.1.1"
 }
 
 object Android {
@@ -57,6 +61,13 @@ object Libs {
   val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.NAVIGATION}"
   val navigationKtx = "androidx.navigation:navigation-ui-ktx:${Versions.NAVIGATION}"
 
+  val dagger =  "com.google.dagger:dagger:${Versions.DAGGER}"
+  val daggerAndroid =  "com.google.dagger:dagger-android:${Versions.DAGGER_ANDROID}"
+  val daggerCompiler =  "com.google.dagger:dagger-compiler:${Versions.DAGGER_COMPILER}"
+  val daggerProcessor =  "com.google.dagger:dagger-android-processor:${Versions.DAGGER_COMPILER}"
+  val daggerSupport =  "com.google.dagger:dagger-android-support:${Versions.DAGGER_ANDROID}"
+
+  val pdfDownloader =  "com.github.caneryilmaz:ZionFileDownloader:${Versions.PDF_DOWNLOADER}"
 }
 
 object TestLibs {
