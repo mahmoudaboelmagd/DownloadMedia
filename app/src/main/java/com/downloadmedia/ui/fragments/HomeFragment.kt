@@ -76,6 +76,10 @@ class HomeFragment : Fragment() {
       }
     }
 
+    homeViewModel.errorThrowable.observe(viewLifecycleOwner) { error ->
+      Toast.makeText(context, error.message, Toast.LENGTH_SHORT).show()
+    }
+
     downloadClicked.observe(viewLifecycleOwner) { mediaModel ->
       if (mediaModel != null){
         mediaAdapter.setProgress(true)

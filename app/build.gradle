@@ -2,6 +2,7 @@ plugins {
   id 'com.android.application'
   id 'kotlin-android'
   id 'kotlin-kapt'
+  id 'kotlin-android-extensions'
 }
 
 android {
@@ -34,6 +35,10 @@ android {
   kotlinOptions {
     jvmTarget = '1.8'
   }
+
+  kapt {
+    generateStubs = true
+  }
 }
 
 
@@ -50,6 +55,8 @@ dependencies {
 
   implementation Libs.dagger
   annotationProcessor Libs.daggerCompiler
+  annotationProcessor Libs.daggerProcessor
+  kapt Libs.daggerCompiler
 
   implementation Libs.retrofit
   implementation Libs.gsonConverter
